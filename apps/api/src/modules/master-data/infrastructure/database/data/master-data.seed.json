@@ -1,0 +1,18 @@
+{
+  "ingredients": [
+    { "type": "base", "name": "Coffee", "sortOrder": 1 },
+    { "type": "base", "name": "Tea", "sortOrder": 2 },
+    { "type": "base", "name": "Milk", "sortOrder": 3 },
+    { "type": "syrup", "name": "Vanilla", "sortOrder": 1 },
+    { "type": "syrup", "name": "Caramel", "sortOrder": 2 },
+    { "type": "syrup", "name": "Chocolate", "sortOrder": 3 },
+    { "type": "topping", "name": "Whipped Cream", "sortOrder": 1 },
+    { "type": "topping", "name": "Cinnamon", "sortOrder": 2 },
+    { "type": "topping", "name": "Marshmallows", "sortOrder": 3 }
+  ],
+  "sizes": [
+    { "name": "Small", "sortOrder": 1 },
+    { "name": "Medium", "sortOrder": 2 },
+    { "name": "Large", "sortOrder": 3 }
+  ]
+}

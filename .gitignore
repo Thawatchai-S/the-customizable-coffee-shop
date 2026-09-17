@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+apps/web/dist/
+
+# Env files (keep .env.example tracked)
+.env
+.env.local
+.env.*.local
+apps/*/.env
+apps/*/.env.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Test / coverage
+coverage/
+
+# Vite
+.vite/
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
