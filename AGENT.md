@@ -25,8 +25,8 @@ that reports an itemized description and a final price.
 ## Step 3
 ## Assignment Objectives
 Propose a software design for the customizable coffee shop system. Your submission should include:
-* A high-level class diagram or description of the architecture.
-* The choice of programming language and explanation for why it was chosen.
-* Implementation of a design approach that allows for flexible adding of ingredients (e.g., syrups, toppings) and dynamic pricing calculations without creating an excessive number of subclasses.
-* Code snippets demonstrating how to create a base drink and customize it with multiple ingredients.
-* Explanation of the benefits of your chosen design approach in terms of maintainability and extensibility.
+1. A high-level class diagram or description of the architecture.
+2. The choice of programming language and explanation for why it was chosen.
+3. Implementation of a design approach that allows for flexible adding of ingredients (e.g., syrups, toppings) and dynamic pricing calculations without creating an excessive number of subclasses.
+4. Code snippets demonstrating how to create a base drink and customize it with multiple ingredients.
+5. Explanation of the benefits of your chosen design approach in terms of maintainability and extensibility.

@@ -1,25 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import DrinkBuilder from './features/drinks/DrinkBuilder.jsx';
+import OrderCart from './features/orders/OrderCart.jsx';
 
 function App() {
-  const [status, setStatus] = useState('checking...');
+  const [orderItems, setOrderItems] = useState([]);
 
-  useEffect(() => {
-    fetch('/api/health')
-      .then((res) => res.json())
-      .then((data) => setStatus(data.status ?? 'unknown'))
-      .catch(() => setStatus('unreachable'));
-  }, []);
+  function addToOrder(item) {
+    setOrderItems((prev) => [...prev, item]);
+  }
+
+  function removeFromOrder(index) {
+    setOrderItems((prev) => prev.filter((_, i) => i !== index));
+  }
 
   return (
-    <div className="min-h-screen bg-amber-50 flex items-center justify-center">
-      <div className="bg-white shadow-lg rounded-2xl p-8 max-w-md text-center space-y-2">
-        <h1 className="text-2xl font-bold text-amber-900">
+    <div className="min-h-screen bg-amber-50 flex justify-center px-4 py-10">
+      <div className="w-full max-w-xl space-y-6">
+        <h1 className="text-2xl font-bold text-amber-900 text-center">
           The Customizable Coffee Shop
         </h1>
-        <p className="text-amber-700">Frontend is running.</p>
-        <p className="text-sm text-gray-500">
-          API health: <span className="font-mono">{status}</span>
-        </p>
+        <div className="bg-white shadow-lg rounded-2xl p-6 flex justify-center">
+          <DrinkBuilder onAddToOrder={addToOrder} />
+        </div>
+        <div className="bg-white shadow-lg rounded-2xl p-6 flex justify-center">
+          <OrderCart
+            items={orderItems}
+            onRemove={removeFromOrder}
+            onOrderPlaced={() => setOrderItems([])}
+          />
+        </div>
       </div>
     </div>
   );

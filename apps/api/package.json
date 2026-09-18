@@ -14,6 +14,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "db:seed": "node src/modules/master-data/infrastructure/database/seedMasterData.js",
+    "test": "node --test src/**/*.test.js",
     "lint": "eslint ."
   },
   "dependencies": {
